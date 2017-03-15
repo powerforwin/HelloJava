@@ -4,6 +4,8 @@
 ##一、安装本地Git客户端
 这个也不再赘述，下载exe文件，安装，配置环境变量， 
 打开命令窗口，键入：git –version，查看版本号，有返回，表示安装成功。否则表示安装失败。
+
+
 ##二、创建git在本地密钥
 为了减少每次提交代码都要输入用户名与密码进行认证的繁琐，我们可以用git命令行在生成密钥(id_rsa与id_rsa.pub)。 
 其中id_rsa:是本地PC的密钥，id_rsa.pub：是用于上传到github存储的密钥。 
@@ -20,6 +22,8 @@ ssh-keygen -C ‘####@qq.com” -t rsa
 最后验证密钥： 
 ssh -v git@github.com 
 当它提示：Hi 用户！You’ve successfully authenticated….你就成功了。
+
+
 ##三、配置github账号：
 在第二步的基础上，我们用文本编辑器打开id_rsa.pub，复制里面的内容。 
 登录github,点击settings 
@@ -27,6 +31,8 @@ ssh -v git@github.com
 接下来配置密钥：点击New SSH key 
  
 ##四、在Github上创建一个仓库，用来存放工程
+
+
 ##五、git命令上传工程至github
 首页cd到项目根目录， 
 然后初始化git,生成本地git管理: 
